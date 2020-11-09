@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Naked FCFS Helper",
+    "version": "2.0.1",
+    "description": "Naked FCFS Extension",
+    "icons": {
+        "16": "img/16.png",
+        "32": "img/32.png",
+        "48": "img/48.png",
+        "128": "img/128.png"
+    },
+    "browser_action": {
+        "default_icon": "img/16.png",
+        "default_popup": "popup/index.html",
+        "default_title": "Naked"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://www.nakedcph.com/*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "storage"
+    ]
+}
